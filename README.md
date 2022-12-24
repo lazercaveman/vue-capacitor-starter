@@ -1,5 +1,5 @@
 # Vue Capacitor Starter
-This template should help get you started developing **cross plattform apps** (Web, IOS & Android) uising Vue 3 and Capacitor, running on Vite.
+This starter kit should help get you started developing **cross platform apps** (Web, IOS & Android) using Vue 3 and Capacitor, running on Vite.
 
 ## Recommended IDE Setup
 
