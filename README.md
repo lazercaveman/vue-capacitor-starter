@@ -1,6 +1,5 @@
-# swiperunner
-
-This template should help get you started developing with Vue 3 in Vite.
+# Vue Capacitor Starter
+This template should help get you started developing **cross plattform apps** (Web, IOS & Android) uising Vue 3 and Capacitor, running on Vite.
 
 ## Recommended IDE Setup
 
@@ -18,9 +17,7 @@ If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has a
 2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
 
 ## Customize configuration
-
 See [Vite Configuration Reference](https://vitejs.dev/config/).
-
 ## Project Setup
 
 ```sh
@@ -28,25 +25,20 @@ npm install
 ```
 
 ### Compile and Hot-Reload for Development
-
 ```sh
 npm run dev
 ```
-
 ### Type-Check, Compile and Minify for Production
-
 ```sh
 npm run build
 ```
 
 ### Run Unit Tests with [Vitest](https://vitest.dev/)
-
 ```sh
 npm run test:unit
 ```
 
 ### Lint with [ESLint](https://eslint.org/)
-
 ```sh
 npm run lint
 ```
