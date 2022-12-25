@@ -1,40 +1,36 @@
-<script setup lang="ts">
-defineProps<{
-  msg: string
-}>()
-</script>
-
 <template>
-  <div class="greetings">
-    <h1 class="green">{{ msg }}</h1>
-    <h3>
-      You’ve successfully created a project with
-      <a href="https://vitejs.dev/" target="_blank" rel="noopener">Vite</a> +
-      <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue 3</a>. What's next?
-    </h3>
+  <div  class="w-96 text-gray-300">
+    <h1 class="mb-8 text-3xl text-green-400 text-center"> Vue Capacitor Starter </h1>
+    <p class="mb-6 text-lg text-center">
+      This is a starter kit using several, as usefull concidered technologies for developing an universal app as like:
+    </p>
+    <p class="flex gap-3 text-base text-center">
+      <a 
+        v-for="(link, i) in links"
+        :key="i"
+        :href="link.url" 
+        target="_blank" 
+        rel="noopener" 
+        class="min-w-fit text-yellow-400 underline after:text-white after:content-[','] last:after:content-['.']"
+      >
+          {{link.text}}
+      </a>
+    </p>
   </div>
 </template>
 
-<style scoped>
-h1 {
-  font-weight: 500;
-  font-size: 2.6rem;
-  top: -10px;
-}
 
-h3 {
-  font-size: 1.2rem;
-}
 
-.greetings h1,
-.greetings h3 {
-  text-align: center;
-}
+<script lang="ts" setup>
+import { defineProps } from 'vue';
 
-@media (min-width: 1024px) {
-  .greetings h1,
-  .greetings h3 {
-    text-align: left;
-  }
-}
-</style>
+type TechnologiesType = Array<{
+  url: string,
+  text: string,
+}>
+
+defineProps<{ 
+  links: TechnologiesType 
+}>();
+
+</script>

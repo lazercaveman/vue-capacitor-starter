@@ -1,15 +1,18 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+  <HelloWorld :links="technologies" />
 </template>
 
-<style>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-}
-</style>
+
+<script lang="ts" setup>
+import HelloWorld from '@/components/HelloWorld.vue'
+
+const technologies = [
+  { url: 'https://vuejs.org/', text: 'Vue 3' },
+  { url: 'https://capacitorjs.com/"', text: 'Capacitor' },
+  { url: 'https://www.typescriptlang.org/', text: 'TypeScript' },
+  { url: 'https://tailwindcss.com/', text: 'Tailwindcss' },
+  { url: 'https://pinia.vuejs.org/', text: 'Pinia' },
+  { url: 'https://vitejs.dev/', text: 'Vite' },
+]
+
+</script>
