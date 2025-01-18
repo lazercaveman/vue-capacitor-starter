@@ -2,7 +2,7 @@
 Welcome to the Vue 3 Cross Platform Starter Kit! This kit provides a solid starting point for developing cross platform apps for **Web**, **IOS**, and **Android** using web technologies. The kit includes the following technologies:
 
 - Vue 3: A popular and progressive JavaScript framework for building user interfaces.
-- Capacitor: A cross-platform app runtime that enables web apps to run natively on multiple platforms.
+- Capacitor: A cross-platform app runtime that enables web apps to run "natively" on multiple platforms.
 - Tailwindcss: A utility-first CSS framework that makes it easy to style your app with pre-defined classes.
 - Pinia: A state management library for Vue that provides a simple and flexible way to manage your app's state.
 - TypeScript: A statically typed language that builds on JavaScript and adds features such as type - annotations, interfaces, and classes.
