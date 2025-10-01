@@ -14,19 +14,19 @@ To get started with this starter kit, you will need to have Node.js and npm (or 
 ```bash
 git clone https://github.com/[username]/vue3-cross-platform-starter-kit.git
 cd vue3-cross-platform-starter-kit
-npm install
+yarn or yarn install
 ```
 
 After installing the dependencies, you can run the development server with the following command:
 
 ```bash
-npm run dev
+yarn dev
 ```
 
 This will start a local development server at http://localhost:3000 where you can view and test your app in the browser. To build the app for production, you can use the following command:
 
 ```bash
-npm run build
+yarn build
 ```
 
 This will compile and optimize your app for deployment to a web server or to a native app store.
