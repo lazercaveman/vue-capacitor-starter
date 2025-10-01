@@ -6,6 +6,9 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
+.yarn/cache
+.yarn/tmp
+.yarn/plugins
 
 node_modules
 .DS_Store
