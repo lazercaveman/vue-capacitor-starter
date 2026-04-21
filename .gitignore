@@ -1,33 +1,46 @@
 # Logs
-logs
 *.log
-npm-debug.log*
+logs
+lerna-debug.log*
+*storybook.log
+/server/_logs
+
+# Vue build artifacts
+.output
+
+# compiled output
+/dist
+/storybook-static
+/node_modules
+
+# Package managers
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
 yarn-debug.log*
 yarn-error.log*
+npm-debug.log*
 pnpm-debug.log*
-lerna-debug.log*
-.yarn/cache
-.yarn/tmp
-.yarn/plugins
 
-node_modules
+# Environment & secrets
+.env
+/localcerts
+
+# OS
 .DS_Store
-ios
-android
-dist
-dist-ssr
-coverage
-*.local
 
-/cypress/videos/
-/cypress/screenshots/
+# Tests
+/coverage
+/.nyc_output
+*/testing/snapshots/current
+*/testing/snapshots/difference
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+*.code-workspace
