@@ -1,35 +1,102 @@
-# Vue 3 Cross Platform Starter Kit
-Welcome to the Vue 3 Cross Platform Starter Kit! This kit provides a solid starting point for developing cross platform apps for **Web**, **IOS**, and **Android** using web technologies. The kit includes the following technologies:
+# Vue Capacitor Starter
 
-- Vue 3: A popular and progressive JavaScript framework for building user interfaces.
-- Capacitor: A cross-platform app runtime that enables web apps to run "natively" on multiple platforms.
-- Tailwindcss: A utility-first CSS framework that makes it easy to style your app with pre-defined classes.
-- Pinia: A state management library for Vue that provides a simple and flexible way to manage your app's state.
-- TypeScript: A statically typed language that builds on JavaScript and adds features such as type - annotations, interfaces, and classes.
-- Vite: A fast and efficient build tool for modern web development that can significantly speed up your development workflow.
+Skip the boilerplate. Ship a cross-platform app to **Web**, **iOS**, and **Android** from a single Vue 3 codebase — everything wired up and ready to go.
 
-## Getting Started
-To get started with this starter kit, you will need to have Node.js and npm (or any other node related package manager of your choice) installed on your computer. Once you have Node.js and npm installed, you can clone the repository and install the dependencies with the following commands:
+## Why this starter?
+
+Most Vue + Capacitor setups leave you stitching together tooling from scratch. This one doesn't. You get:
+
+- **Vue 3 Composition API** with `<script setup>` — the modern way to write Vue
+- **Capacitor 8** — deploy the same codebase to iOS, Android, and the web with native plugin access
+- **Tailwind CSS v4** — utility-first styling that works everywhere
+- **Pinia** — lightweight, TypeScript-first state management
+- **Vue Router** — full client-side routing ready to extend
+- **VueUse** — composable utilities so you're not reinventing the wheel
+- **Vitest** — fast unit testing, co-located with your components
+- **Oxlint + Oxfmt** — a modern, fast linter and formatter replacing ESLint/Prettier
+- **TypeScript** throughout — strict types, no `any`
+- **Yarn 4** — fast, deterministic installs with zero-installs support
+
+No opinions on your backend. No CMS lock-in. Just a clean, modern foundation.
+
+## Prerequisites
+
+- **Node** `24.14.0` — use [fnm](https://github.com/Schniz/fnm) or [nvm](https://github.com/nvm-sh/nvm)
+- **Yarn 4** — the only supported package manager (`npm` and `pnpm` are not supported)
+
+## Quick Start
 
 ```bash
-git clone https://github.com/[username]/vue3-cross-platform-starter-kit.git
-cd vue3-cross-platform-starter-kit
-npm install
+git clone https://github.com/lazercaveman/vue-capacitor-starter.git
+cd vue-capacitor-starter
+yarn install
+yarn dev
 ```
 
-After installing the dependencies, you can run the development server with the following command:
+The dev server starts at `http://localhost:5173`.
+
+## Commands
 
 ```bash
-npm run dev
+yarn dev              # Start dev server
+yarn build            # Type-check + production build
+yarn preview          # Preview production build locally
+yarn test             # Run Vitest
+yarn test:ui          # Vitest with browser UI
+yarn test:coverage    # Vitest with v8 coverage
+yarn lint             # Oxlint
+yarn lint:fix         # Oxlint with auto-fix
+yarn format           # Oxfmt
+yarn format:check     # Oxfmt dry-run (CI)
+yarn type-check       # vue-tsc
 ```
 
-This will start a local development server at http://localhost:3000 where you can view and test your app in the browser. To build the app for production, you can use the following command:
+## Project Structure
 
-```bash
-npm run build
+```
+src/
+├── assets/         # Global styles and static assets
+├── components/     # Reusable Vue components
+├── router/         # Vue Router configuration
+├── stores/         # Pinia stores
+├── views/          # Route-level components
+├── App.vue
+└── main.ts
 ```
 
-This will compile and optimize your app for deployment to a web server or to a native app store.
+## Deploying to iOS & Android
+
+1. Build the web output:
+
+    ```bash
+    yarn build
+    ```
+
+2. Sync to the native projects:
+
+    ```bash
+    npx cap sync
+    ```
+
+3. Open in the native IDE:
+
+    ```bash
+    npx cap open ios      # Opens Xcode
+    npx cap open android  # Opens Android Studio
+    ```
+
+Before your first native build, update [capacitor.config.ts](capacitor.config.ts) with your app's ID and name:
+
+```ts
+const config: CapacitorConfig = {
+  appId: 'com.yourcompany.yourapp',
+  appName: 'Your App Name',
+  webDir: 'dist',
+};
+```
+
+See the [Capacitor docs](https://capacitorjs.com/docs) for platform-specific environment requirements (Xcode, Android Studio, CocoaPods).
 
 ## Contributing
-If you would like to contribute to this starter kit, feel free to create a pull request or open an issue. Your contributions are greatly appreciated!
+
+PRs and issues are welcome. Open an issue first for larger changes so we can align on direction before you invest the time.
