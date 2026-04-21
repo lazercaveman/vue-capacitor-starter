@@ -22,8 +22,6 @@
 
 
 <script lang="ts" setup>
-import { defineProps } from 'vue';
-
 type TechnologiesType = Array<{
   url: string,
   text: string,
