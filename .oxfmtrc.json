@@ -13,6 +13,6 @@
   "embeddedLanguageFormatting": "auto",
   "ignorePatterns": ["node_modules", "coverage", "dist", ".output", ".github", ".nuxt", ".yarn", "**/*.md", "**/*.mdx"],
   "sortTailwindcss": {
-    "stylesheet": "./app/assets/style/tailwind.css",
-  },
+    "stylesheet": "./src/assets/main.css"
+  }
 }

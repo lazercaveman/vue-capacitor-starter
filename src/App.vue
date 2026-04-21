@@ -1,10 +1,7 @@
 <template>
-  <div class="flex justify-center items-center w-full min-h-screen bg-gray-900">
-
-    <div class="flex flex-col justify-center items-center gap-12 w-3/5">
-      <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="164" height="164" />
+  <div class="flex min-h-screen w-full items-center justify-center bg-gray-900">
+    <div class="flex w-3/5 flex-col items-center justify-center gap-12">
       <RouterView />
     </div>
-
   </div>
 </template>

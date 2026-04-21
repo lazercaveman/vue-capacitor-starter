@@ -1,0 +1,41 @@
+{
+  "editor.formatOnSave": true,
+  // Prevent vue extension formatting (since oxfmt does the job)
+  "vue.format.template.enabled": false,
+  "editor.defaultFormatter": "oxc.oxc-vscode",
+  "[typescript]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode"
+  },
+  "editor.tabSize": 2,
+  "files.eol": "\n",
+  "tailwindCSS.lint.suggestCanonicalClasses": "ignore",
+  "cSpell.words": [
+    "agital",
+    "austinfrasier",
+    "bradlc",
+    "dbaeumer",
+    "esyoil",
+    "fetchpriority",
+    "fieldtype",
+    "iubh",
+    "katjes",
+    "linktype",
+    "lionsclub",
+    "logicjoe",
+    "macbook",
+    "networkstars",
+    "oxfmt",
+    "touchicon",
+    "trafficpartner",
+    "welcmpass",
+    "workgenius",
+    "ytimg"
+  ],
+  "cSpell.ignoreWords": ["ROUTERLINK"]
+}

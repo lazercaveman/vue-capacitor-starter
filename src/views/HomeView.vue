@@ -2,9 +2,8 @@
   <HelloWorld :links="technologies" />
 </template>
 
-
 <script lang="ts" setup>
-import HelloWorld from '@/components/HelloWorld.vue'
+import HelloWorld from '@/components/HelloWorld.vue';
 
 const technologies = [
   { url: 'https://vuejs.org/', text: 'Vue 3' },
@@ -13,6 +12,5 @@ const technologies = [
   { url: 'https://tailwindcss.com/', text: 'Tailwindcss' },
   { url: 'https://pinia.vuejs.org/', text: 'Pinia' },
   { url: 'https://vitejs.dev/', text: 'Vite' },
-]
-
+];
 </script>
